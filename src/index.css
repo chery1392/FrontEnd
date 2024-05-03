@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Vazir";
+}
+@font-face {
+  font-family: "Vazir";
+  src: url("/fonts/vazir/Vazir.eot") url("/fonts/vazir/Vazir.woff2")
+      format("woff2"),
+    url("/fonts/vazir/Vazir.woff") format("woff"),
+    url("/fonts/vazir/Vazir.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    background: rgb(241, 241, 241);
+    color: #383636ef;
+  }
+}

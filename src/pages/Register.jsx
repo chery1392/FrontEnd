@@ -5,7 +5,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { checkUsernameExistence, login } from "../services/auth";
 
-const Register = () => {
+const Register = ({setIsLoggedIn}) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -38,6 +38,7 @@ const Register = () => {
     if (response && response.status === 201) {
       console.log(response);
       toast.success("ثبت نام با موفقیت انجام شد");
+      setIsLoggedIn(true)
       navigate("/home-page");
       return;
     }

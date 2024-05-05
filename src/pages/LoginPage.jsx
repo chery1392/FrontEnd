@@ -5,14 +5,12 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { checkUsernameExistence } from "../services/auth";
 
-
-const LoginPage = () => {
+const LoginPage = ({setIsLoggedIn}) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
-
   const submitHandler = async (e) => {
     e.preventDefault();
 
@@ -25,8 +23,35 @@ const LoginPage = () => {
       return;
     }
 
-    const data = await checkUsernameExistence(username, password, navigate);
-  
+    const { response, error } = await checkUsernameExistence();
+    if (response) {
+      const userExists = response.data.some(
+        (user) => user.username === username
+      );
+      console.log(userExists)
+
+      if (!userExists) {
+        return toast.error(
+          "کاربری با این نام کاربری وجود ندارد. لطفاً ثبت نام کنید."
+        );
+      }
+
+      const user = response.data.find(
+        (user) => user.username === username && user.password === password
+      );
+      if (!user) {
+        return toast.error("رمز عبور اشتباه است.");
+      }
+
+      toast.success("با موفقیت وارد شدین");
+      setIsLoggedIn(true)
+      navigate("/home-page");
+
+    }
+
+    if (error) {
+      console.log(error);
+    }
   };
 
   const handleTogglePasswordVisibility = () => {

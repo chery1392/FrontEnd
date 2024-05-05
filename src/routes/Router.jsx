@@ -1,16 +1,30 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import { HomePage,LoginPage, OtpPage, Register } from '../pages';
+import React, { useEffect, useState } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
+import { HomePage, LoginPage, Register } from "../pages";
+import { getCookie, setCookie } from "../utils/cookie";
 
 const Router = () => {
-    return (
-        <Routes>
-            <Route path="/" element={<LoginPage/>}/>
-            <Route path="/home-page" element={<HomePage/>}/>
-            <Route path="/otp-page" element={<OtpPage/>}/>
-            <Route path="/register" element={<Register/>}/>
-        </Routes>
-    );
+  const initialIsLoggedIn = getCookie("isLoggedIn") === "true";
+
+  const [isLoggedIn, setIsLoggedIn] = useState(initialIsLoggedIn);
+
+  useEffect(() => {
+    setCookie("isLoggedIn", isLoggedIn ? "true" : "false", 2);
+  }, [isLoggedIn]);
+
+  return (
+    <Routes>
+      <Route path="/" element={ isLoggedIn ? <Navigate to="/home-page"/> : <LoginPage setIsLoggedIn={setIsLoggedIn}/>} />
+      <Route
+        path="/home-page"
+        element={isLoggedIn ? <HomePage /> : <Navigate to="/" />}
+      />
+      <Route
+        path="/register"
+        element={isLoggedIn ? <Navigate to="/home-page"/> : <Register setIsLoggedIn={setIsLoggedIn} />} 
+      />
+    </Routes>
+  );
 };
 
 export default Router;

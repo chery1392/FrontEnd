@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { checkUsernameExistence, login } from "../services/auth";
-import api from "../configs/api";
+import { checkUsernameExistence } from "../services/auth";
+
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
@@ -12,12 +12,6 @@ const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
-
-  let forgetHandler = (e) => {
-    e.preventDefault();
-  };
-
-  useEffect(() => {}, []);
 
   const submitHandler = async (e) => {
     e.preventDefault();

@@ -3,17 +3,19 @@ import React, { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { checkUsernameExistence, login } from "../services/auth";
+import api from "../configs/api";
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
+  const navigate = useNavigate();
+
   let forgetHandler = (e) => {
     e.preventDefault();
   };
-
-  const navigate = useNavigate();
 
   useEffect(() => {}, []);
 
@@ -22,27 +24,14 @@ const LoginPage = () => {
 
     if (username.trim().length === 0) {
       toast.error("نام کاربری را وارد کنید");
-
       return;
     }
     if (password.trim().length === 0) {
       toast.error("رمزعبور را وارد کنید");
-
       return;
     }
 
-    const { response, error } = await checkUserPass(username, password);
-
-    if (response) {
-      toast.success("با موفقیت وارد شدین");
-
-      navigate("");
-      return;
-    }
-    if (error) {
-      console.log(error);
-      return;
-    }
+    await checkUsernameExistence(username, password, navigate);
   };
 
   const handleTogglePasswordVisibility = () => {
@@ -93,13 +82,14 @@ const LoginPage = () => {
           ورود
         </button>
         <div>
-            <button
-              onClick={()=>navigate("")}
-              className=" text-gray-900  transition duration-300 text-sm mt-3  w-full"
-            >
-                هنوز ثبت نام نکرده اید؟!
-            </button>
-          </div>
+          <button
+            type="button"
+            onClick={() => navigate("/register")}
+            className=" text-gray-900  transition duration-300 text-sm mt-3  w-full"
+          >
+            هنوز ثبت نام نکرده اید؟!
+          </button>
+        </div>
       </form>
     </div>
   );

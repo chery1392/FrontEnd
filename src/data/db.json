@@ -1,3 +1,15 @@
 {
-  "users": []
+  "users": [
+    {
+      "id": "65dc",
+      "username": "112233",
+      "password": "112233",
+      "phoneNumber": "09396270874"
+    },
+    {
+      "username": "0000",
+      "password": "0000",
+      "phoneNumber": "09197801230"
+    }
+  ]
 }

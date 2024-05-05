@@ -4,7 +4,6 @@ import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { checkUsernameExistence, login } from "../services/auth";
-import api from "../configs/api";
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -14,14 +13,17 @@ const Register = () => {
 
   const navigate = useNavigate();
 
-  let forgetHandler = (e) => {
-    e.preventDefault();
-  };
-
   useEffect(() => {}, []);
 
   const submitHandler = async (e) => {
     e.preventDefault();
+    if (!phoneNumber) {
+      toast.error("وارد کردن شماره همراه الزامی میباشد!");
+      return;
+    } else if (!/^09\d{9}$/.test(phoneNumber)) {
+      toast.error("شماره همراه باید با 09 شروع شود و 11 رقم باشد!");
+      return;
+    }
 
     if (username.trim().length === 0) {
       toast.error("نام کاربری را وارد کنید");
@@ -32,7 +34,17 @@ const Register = () => {
       return;
     }
 
-    await checkUsernameExistence(username, password, navigate);
+    const { response, error } = await login(phoneNumber, username, password);
+    if (response && response.status === 201) {
+      console.log(response);
+      toast.success("ثبت نام با موفقیت انجام شد");
+      navigate("/home-page");
+      return;
+    }
+    if (error) {
+      console.log(error);
+      return;
+    }
   };
 
   const handleTogglePasswordVisibility = () => {
@@ -53,7 +65,7 @@ const Register = () => {
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
           className="w-full py-2 px-4 border-0 rounded-lg my-4 outline-none focus:outline-none focus:ring-2 focus:ring-[#e86e0080]"
-          placeholder="تلفن همراه...."
+          placeholder="شماره همراه...."
         />
         <input
           type="text"
@@ -87,19 +99,10 @@ const Register = () => {
 
         <button
           type="submit"
-          className="before:w-full bg-[#E86E00]  text-white py-2 rounded-md transition duration-300  text-base border-0 outline-0 p-1 cursor-pointer mt-4"
+          className="w-full bg-[#E86E00]  text-white py-2 rounded-md transition duration-300  text-base border-0 outline-0 p-1 cursor-pointer mt-4"
         >
           ورود
         </button>
-        <div>
-          <button
-            type="button"
-            onClick={() => navigate("/register")}
-            className=" text-gray-900  transition duration-300 text-sm mt-3  w-full"
-          >
-            هنوز ثبت نام نکرده اید؟!
-          </button>
-        </div>
       </form>
     </div>
   );

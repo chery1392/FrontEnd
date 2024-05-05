@@ -1,9 +1,13 @@
 import toast from "react-hot-toast";
 import api from "./../configs/api";
 
-const login = async (username, password) => {
+const login = async (phoneNumber, username, password) => {
   try {
-    const response = await api.post("users", { username, password });
+    const response = await api.post("users", {
+      phoneNumber,
+      username,
+      password,
+    });
     return { response };
   } catch (error) {
     return { error };
@@ -25,7 +29,7 @@ const checkUsernameExistence = async (username, password, navigate) => {
     const user = response.data.find(
       (user) => user.username === username && user.password === password
     );
-
+    console.log(user);
     if (!user) {
       return toast.error("رمز عبور اشتباه است.");
     }

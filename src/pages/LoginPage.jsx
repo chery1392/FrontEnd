@@ -25,7 +25,8 @@ const LoginPage = () => {
       return;
     }
 
-    await checkUsernameExistence(username, password, navigate);
+    const data = await checkUsernameExistence(username, password, navigate);
+  
   };
 
   const handleTogglePasswordVisibility = () => {

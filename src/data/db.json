@@ -23,6 +23,104 @@
       "phoneNumber": "09112525369",
       "username": "Ali",
       "password": "Ali"
+    },
+    {
+      "id": "65f9",
+      "phoneNumber": "09152525369",
+      "username": "1234567",
+      "password": "@Hasan12345678123456"
+    }
+  ],
+  "homes": [
+    {
+      "location": {
+        "latitude": 35.6895,
+        "longitude": 51.3963
+      },
+      "mobile_number": "09123456789",
+      "address": "تهران، خیابان ولی‌عصر، روبروی پارک ملت",
+      "description": "آپارتمان ۳ خوابه با امکانات کامل"
+    },
+    {
+      "location": {
+        "latitude": 35.7571,
+        "longitude": 51.4714
+      },
+      "mobile_number": "09121234567",
+      "address": "تهران، خیابان جمهوری، نبش کوچه مهدی",
+      "description": "ویلای لوکس با دید عالی به شهر"
+    },
+    {
+      "location": {
+        "latitude": 35.6892,
+        "longitude": 51.3889
+      },
+      "mobile_number": "09129876543",
+      "address": "تهران، میدان انقلاب، خیابان کارگر",
+      "description": "آپارتمان مبله با دسترسی عالی"
+    },
+    {
+      "location": {
+        "latitude": 35.7055,
+        "longitude": 51.4072
+      },
+      "mobile_number": "09127654321",
+      "address": "تهران، میدان ولی‌عصر، خیابان کریم‌خان",
+      "description": "خانه ایستاده در موقعیت عالی"
+    },
+    {
+      "location": {
+        "latitude": 35.6998,
+        "longitude": 51.3377
+      },
+      "mobile_number": "09124567890",
+      "address": "تهران، خیابان شریعتی، خیابان مفتح",
+      "description": "آپارتمان لوکس با امکانات شهری"
+    },
+    {
+      "location": {
+        "latitude": 35.7314,
+        "longitude": 51.4005
+      },
+      "mobile_number": "09121112233",
+      "address": "تهران، خیابان سهروردی، خیابان بهشتی",
+      "description": "ویلای دوبلکس با باغ زیبا"
+    },
+    {
+      "location": {
+        "latitude": 35.7036,
+        "longitude": 51.3515
+      },
+      "mobile_number": "09129998877",
+      "address": "تهران، خیابان ولی‌عصر، نرسیده به میدان ونک",
+      "description": "آپارتمان نوساز با دید به شهر"
+    },
+    {
+      "location": {
+        "latitude": 35.7204,
+        "longitude": 51.4434
+      },
+      "mobile_number": "09128889900",
+      "address": "تهران، خیابان پاسداران، خیابان سهروردی",
+      "description": "آپارتمان مجلل در منطقه ای ارام"
+    },
+    {
+      "location": {
+        "latitude": 35.7248,
+        "longitude": 51.3389
+      },
+      "mobile_number": "09126667788",
+      "address": "تهران، خیابان ولی‌عصر، نرسیده به پارک لاله",
+      "description": "ویلای لوکس با استخر و سونا"
+    },
+    {
+      "location": {
+        "latitude": 35.7295,
+        "longitude": 51.4402
+      },
+      "mobile_number": "09123334455",
+      "address": "تهران، خیابان شریعتی، خیابان ظفر",
+      "description": "آپارتمان با دسترسی عالی به مراکز خرید"
     }
   ]
 }

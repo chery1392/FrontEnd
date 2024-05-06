@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import { HomePage, LoginPage, Register } from "../pages";
+import { DashboardPage, HomePage, LoginPage, Register } from "../pages";
 import { getCookie, setCookie } from "../utils/cookie";
 import Layout from "../layout/Layout";
 
@@ -40,6 +40,7 @@ const Router = () => {
             )
           }
         />
+        <Route path="/dashboard"  element={<DashboardPage/>}/>
       </Routes>
     </Layout>
   );

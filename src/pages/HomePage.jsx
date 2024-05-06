@@ -2,6 +2,7 @@ import React from 'react';
 import { getHomes } from '../services/homes';
 import { useQuery } from '@tanstack/react-query';
 import Loader from '../modules/Loader';
+import Header from '../layout/Header';
 
 
 const HomePage =  () => {

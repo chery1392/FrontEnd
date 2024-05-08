@@ -11,7 +11,7 @@ const HomePage = () => {
     queryFn: getHomes,
   });
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 6;
+  const itemsPerPage = 8;
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -27,7 +27,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <div className="flex flex-wrap justify-between mt-5 w-full h-[100vh]">
+      <div className="grid grid-cols-2 md:grid-cols-4 mt-5 w-full h-[100vh]">
         {currentItems.map((post) => (
             <Link key={post?.id} to={`/details/${post?.id}`}>
             <div className="w-[270px] flex flex-col border-2 border-gray-300 p-4 m-3 rounded-md">

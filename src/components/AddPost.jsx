@@ -5,20 +5,26 @@ import Map from "./Map";
 import { useMutation } from "@tanstack/react-query";
 import { addPosts } from "../services/homes";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import Loader from "../modules/Loader";
 
 const AddPost = () => {
-  const [sending, isSending] = useState(false);
   const [form, setForm] = useState({
     location: null,
     mobile_number: "",
     address: "",
     description: "",
   });
+  const navigate = useNavigate();
 
   const { data, isPending, error, mutate } = useMutation({
     mutationFn: addPosts,
   });
-  console.log(data, error, isPending);
+
+  if (data?.status === 201) {
+    toast.success("آگهی با موفقیت ایجاد شد.");
+    navigate("/home-page");
+  }
 
   const changeHandler = (e) => {
     const name = e.target.name;
@@ -41,10 +47,12 @@ const AddPost = () => {
       toast.error("شماره همراه باید با 09 شروع شود و 11 رقم باشد!");
       return;
     }
+
     mutate(form);
     console.log(data);
     console.log(form);
   };
+  if (isPending) return <Loader />;
 
   return (
     <div>
@@ -87,10 +95,7 @@ const AddPost = () => {
           id="description"
           className="mb-1 py-1 px-1 border border-gray-300 rounded-md focus:outline-none focus:border-[#5349dd]"
         />
-        <button
-          disabled={sending}
-          className="py-2 mt-3 px-4 bg-[#5349dd] text-white rounded-md shadow-md hover:bg-[#3e3aa9] transition duration-300 ease-in-out"
-        >
+        <button className="py-2 mt-3 px-4 bg-[#5349dd] text-white rounded-md shadow-md hover:bg-[#3e3aa9] transition duration-300 ease-in-out">
           ایجاد
         </button>
       </form>

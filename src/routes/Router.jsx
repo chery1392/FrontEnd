@@ -1,6 +1,12 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import { DashboardPage, HomePage, LoginPage, PostDetails, Register } from "../pages";
+import {
+  DashboardPage,
+  HomePage,
+  LoginPage,
+  PostDetails,
+  Register,
+} from "../pages";
 import { getCookie, setCookie } from "../utils/cookie";
 import Layout from "../layout/Layout";
 
@@ -14,37 +20,66 @@ const Router = () => {
   }, [isLoggedIn]);
 
   return (
-    <Layout>
-      <Routes>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          isLoggedIn ? (
+            <Navigate to="/home-page" />
+          ) : (
+            <LoginPage setIsLoggedIn={setIsLoggedIn} />
+          )
+        }
+      />
+      <Route
+        path="/register"
+        element={
+          isLoggedIn ? (
+            <Navigate to="/home-page" />
+          ) : (
+            <Register setIsLoggedIn={setIsLoggedIn} />
+          )
+        }
+      />
+      <Route>
         <Route
-          path="/"
           element={
             isLoggedIn ? (
-              <Navigate to="/home-page" />
+              <Layout>
+                <HomePage />
+              </Layout>
             ) : (
-              <LoginPage setIsLoggedIn={setIsLoggedIn} />
+              <Navigate to="/" />
             )
           }
-        />
-        <Route
           path="/home-page"
-          element={isLoggedIn ? <HomePage /> : <Navigate to="/" />}
         />
         <Route
-          path="/register"
           element={
             isLoggedIn ? (
-              <Navigate to="/home-page" />
+              <Layout>
+                <DashboardPage />
+              </Layout>
             ) : (
-              <Register setIsLoggedIn={setIsLoggedIn} />
+              <Navigate to="/" />
             )
           }
+          path="/dashboard"
         />
-        <Route path="/dashboard"  element={<DashboardPage/>}/>
-        <Route path="/details/:id" element={<PostDetails/>}/>
-
-      </Routes>
-    </Layout>
+        <Route
+          element={
+            isLoggedIn ? (
+              <Layout>
+                <PostDetails />
+              </Layout>
+            ) : (
+              <Navigate to="/" />
+            )
+          }
+          path="/details/:id"
+        />
+      </Route>
+    </Routes>
   );
 };
 

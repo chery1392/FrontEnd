@@ -1,6 +1,6 @@
 import React from "react";
 
-const DeleteModal = ({ removeCourse, hideDeleteModal }) => {
+const DeleteModal = ({ removePost, hideDeleteModal }) => {
   return (
     <div
       className="w-full h-full fixed flex items-center justify-center visible opacity-100 z-10 top-0 left-0 transition-all duration-300"
@@ -17,7 +17,7 @@ const DeleteModal = ({ removeCourse, hideDeleteModal }) => {
         <div className="flex gap-3 items-center justify-around">
           <button
             className="px-8 py-1 border-0 outline-0 text-base cursor-pointer transition-all duration-300 bg-red-700 text-white shadow-md hover:-translate-y-2 rounded-md"
-            onClick={removeCourse}
+            onClick={removePost}
           >
             بله
           </button>

@@ -1,0 +1,406 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "ali",
+      "email": "user1@example.com",
+      "password": "user1pass",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "name": "mohammad",
+      "email": "user2@example.com",
+      "password": "user2pass",
+      "role": "user"
+    },
+    {
+      "id": "9f4c",
+      "email": "",
+      "password": "1234",
+      "username": "alig82961@gmail.com"
+    },
+    {
+      "email": "seyedalirafazi80@gmail.com",
+      "password": "1234",
+      "username": "ali"
+    },
+    {
+      "email": "s80@gmail.com",
+      "password": "$2a$10$EmLrwclDE0NITvNEpy0E1.j8FcURNcIY4c2NQVU/a1O9VfU0G8ZYG",
+      "username": "qwer",
+      "id": "bBFEhUh"
+    },
+    {
+      "email": "mamad@gmail.com",
+      "password": "$2a$10$9dRgFxOioDpCNPxiWa8AO.B2E61bE3t2/KF1PxSiUyWKqmYwoAVru",
+      "username": "mamad",
+      "id": "ABH4Fjd"
+    },
+    {
+      "email": "ali@gmail.com",
+      "password": "$2a$10$S/hs252UmsiAhI9LLZ09Bul3hR7l/ryYyzpLWJKNmW4b4ssGiOjni",
+      "username": "ali4@gmail.com",
+      "id": "ktdotIJ"
+    },
+    {
+      "email": "aeli@gmail.com",
+      "password": "$2a$10$FkrCWmi41Eao1VvYiM9G1Oc5.YaLrAmZpxlFiALZ4tnkIIj0NaiV2",
+      "username": "aeli4@gmail.com",
+      "id": "qE9gDc5"
+    },
+    {
+      "email": "ali5@gmail.com",
+      "password": "$2a$10$kvcs6kqaK2IPmgHp0wUnWunnGtJjRH3Jmil1tGUMAbvrJruEwG9AG",
+      "username": "علی محمدی",
+      "id": "3_s0pOD"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1a23",
+      "location": {
+        "lat": 35.6892,
+        "lng": 51.3889
+      },
+      "title": "آپارتمان لوکس در تهران",
+      "description": "آپارتمان بزرگ و مدرن در قلب تهران با دسترسی آسان به مترو",
+      "mobile_number": "09129876543",
+      "address": "تهران، میدان انقلاب، خیابان کارگر",
+      "price": "600000000",
+      "rooms": 5,
+      "parking": 3,
+      "warHouse": 1,
+      "WC": 2,
+      "WCType": "فرنگی",
+      "elevator": 0,
+      "floor": 8,
+      "collingSystem": "کولر آبی",
+      "heatingSystem": "رادیاتور",
+      "floorMaterial": "سرامیک",
+      "city": "تهران"
+    },
+    {
+      "id": "2b34",
+      "location": {
+        "lat": 35.6893,
+        "lng": 51.39
+      },
+      "title": "واحد مسکونی دنج",
+      "description": "آپارتمان زیبا با نمایی جذاب در منطقه آرام",
+      "mobile_number": "09129999943",
+      "address": "تهران، میدان ولیعصر، خیابان فاطمی",
+      "price": "500000000",
+      "rooms": 3,
+      "parking": 1,
+      "warHouse": 0,
+      "WC": 1,
+      "WCType": "ایرانی",
+      "elevator": 1,
+      "floor": 2,
+      "collingSystem": "اسپیلت",
+      "heatingSystem": "پکیج",
+      "floorMaterial": "پارکت",
+      "city": "تهران"
+    },
+    {
+      "id": "3c45",
+      "location": {
+        "lat": 35.692,
+        "lng": 51.395
+      },
+      "title": "خانه ای با چشم انداز زیبا",
+      "description": "واحدی با منظره عالی از تهران و دسترسی آسان به بزرگراه",
+      "mobile_number": "09123456789",
+      "address": "تهران، بلوار کشاورز، خیابان فلسطین",
+      "price": "750000000",
+      "rooms": 4,
+      "parking": 2,
+      "warHouse": 1,
+      "WC": 2,
+      "WCType": "فرنگی",
+      "elevator": 1,
+      "floor": 10,
+      "collingSystem": "کولر گازی",
+      "heatingSystem": "بخاری",
+      "floorMaterial": "موکت",
+      "city": "تهران"
+    },
+    {
+      "id": "4d56",
+      "location": {
+        "lat": 35.688,
+        "lng": 51.3867
+      },
+      "title": "واحد نوساز با امکانات کامل",
+      "description": "آپارتمان شیک و نوساز با امکانات رفاهی کامل",
+      "mobile_number": "09121234567",
+      "address": "تهران، میدان هفت تیر، خیابان کریم خان",
+      "price": "850000000",
+      "rooms": 4,
+      "parking": 2,
+      "warHouse": 1,
+      "WC": 1,
+      "WCType": "ایرانی",
+      "elevator": 1,
+      "floor": 6,
+      "collingSystem": "کولر آبی",
+      "heatingSystem": "رادیاتور",
+      "floorMaterial": "سنگ",
+      "city": "تهران"
+    },
+    {
+      "id": "5e67",
+      "location": {
+        "lat": 35.6901,
+        "lng": 51.3898
+      },
+      "title": "واحد خوش نقشه",
+      "description": "آپارتمانی خوش نقشه با نورگیری عالی",
+      "mobile_number": "09127654321",
+      "address": "تهران، خیابان شریعتی، میدان قدس",
+      "price": "700000000",
+      "rooms": 3,
+      "parking": 1,
+      "warHouse": 0,
+      "WC": 1,
+      "WCType": "فرنگی",
+      "elevator": 1,
+      "floor": 3,
+      "collingSystem": "اسپیلت",
+      "heatingSystem": "پکیج",
+      "floorMaterial": "سرامیک",
+      "city": "تهران"
+    },
+    {
+      "id": "50z78",
+      "location": {
+        "lat": 35.6932,
+        "lng": 51.3999
+      },
+      "title": "آپارتمان دوبلکس با استخر اختصاصی",
+      "description": "واحد دوبلکس لوکس با استخر و امکانات رفاهی مدرن",
+      "mobile_number": "09128765432",
+      "address": "تهران، خیابان نیاوران",
+      "price": "1200000000",
+      "rooms": 6,
+      "parking": 4,
+      "warHouse": 1,
+      "WC": 3,
+      "WCType": "ایرانی",
+      "elevator": 2,
+      "floor": 12,
+      "collingSystem": "کولر گازی",
+      "heatingSystem": "پکیج",
+      "floorMaterial": "پارکت",
+      "city": "تهران"
+    },
+    {
+      "id": "16p89",
+      "location": {
+        "lat": 35.6935,
+        "lng": 51.3905
+      },
+      "title": "آپارتمان شیک در سعادت‌آباد",
+      "description": "واحدی مدرن و شیک با دسترسی آسان به مراکز خرید",
+      "mobile_number": "09123498765",
+      "address": "تهران، سعادت‌آباد، بلوار سرو",
+      "price": "800000000",
+      "rooms": 3,
+      "parking": 2,
+      "warHouse": 1,
+      "WC": 2,
+      "WCType": "ایرانی",
+      "elevator": 1,
+      "floor": 6,
+      "collingSystem": "کولر آبی",
+      "heatingSystem": "رادیاتور",
+      "floorMaterial": "سرامیک",
+      "city": "تهران"
+    },
+    {
+      "id": "17q90",
+      "location": {
+        "lat": 35.6912,
+        "lng": 51.3899
+      },
+      "title": "واحد لوکس با نمای برج",
+      "description": "آپارتمان لوکس با نمای برجسته و دید شهر تهران",
+      "mobile_number": "09124567899",
+      "address": "تهران، خیابان فرشته",
+      "price": "1500000000",
+      "rooms": 5,
+      "parking": 3,
+      "warHouse": 1,
+      "WC": 3,
+      "WCType": "فرنگی",
+      "elevator": 2,
+      "floor": 12,
+      "collingSystem": "اسپیلت",
+      "heatingSystem": "پکیج",
+      "floorMaterial": "سنگ",
+      "city": "تهران"
+    },
+    {
+      "id": "18r01",
+      "location": {
+        "lat": 35.6884,
+        "lng": 51.3921
+      },
+      "title": "آپارتمان کوچک و اقتصادی",
+      "description": "واحدی کوچک و مقرون به صرفه با نورگیری مناسب",
+      "mobile_number": "09121234444",
+      "address": "تهران، خیابان جمهوری",
+      "price": "300000000",
+      "rooms": 1,
+      "parking": 0,
+      "warHouse": 0,
+      "WC": 1,
+      "WCType": "ایرانی",
+      "elevator": 0,
+      "floor": 1,
+      "collingSystem": "کولر آبی",
+      "heatingSystem": "بخاری",
+      "floorMaterial": "موکت",
+      "city": "تهران"
+    },
+    {
+      "id": "19s12",
+      "location": {
+        "lat": 35.6947,
+        "lng": 51.3973
+      },
+      "title": "آپارتمان نوساز در ولنجک",
+      "description": "واحد نوساز و لاکچری با دسترسی عالی به بزرگراه",
+      "mobile_number": "09123456721",
+      "address": "تهران، ولنجک، خیابان امیرآباد",
+      "price": "1100000000",
+      "rooms": 4,
+      "parking": 2,
+      "warHouse": 1,
+      "WC": 2,
+      "WCType": "فرنگی",
+      "elevator": 1,
+      "floor": 10,
+      "collingSystem": "کولر گازی",
+      "heatingSystem": "پکیج",
+      "floorMaterial": "پارکت",
+      "city": "تهران"
+    },
+    {
+      "id": "20t23",
+      "location": {
+        "lat": 35.6953,
+        "lng": 51.398
+      },
+      "title": "آپارتمان دوبلکس در نیاوران",
+      "description": "واحد دوبلکس لوکس با نمای زیبا و چشم‌انداز کوه",
+      "mobile_number": "09123332222",
+      "address": "تهران، نیاوران، خیابان کامرانیه",
+      "price": "1800000000",
+      "rooms": 6,
+      "parking": 4,
+      "warHouse": 1,
+      "WC": 3,
+      "WCType": "ایرانی",
+      "elevator": 2,
+      "floor": 14,
+      "collingSystem": "اسپیلت",
+      "heatingSystem": "رادیاتور",
+      "floorMaterial": "سنگ",
+      "city": "تهران"
+    },
+    {
+      "id": "21u34",
+      "location": {
+        "lat": 35.6925,
+        "lng": 51.3917
+      },
+      "title": "آپارتمان با دسترسی به مترو",
+      "description": "واحدی خوش نقشه با دسترسی عالی به وسایل حمل‌و‌نقل عمومی",
+      "mobile_number": "09129998888",
+      "address": "تهران، خیابان کریمخان، میدان هفت تیر",
+      "price": "500000000",
+      "rooms": 2,
+      "parking": 1,
+      "warHouse": 0,
+      "WC": 1,
+      "WCType": "فرنگی",
+      "elevator": 1,
+      "floor": 5,
+      "collingSystem": "کولر آبی",
+      "heatingSystem": "رادیاتور",
+      "floorMaterial": "سرامیک",
+      "city": "تهران"
+    },
+    {
+      "id": "22v45",
+      "location": {
+        "lat": 35.6908,
+        "lng": 51.3949
+      },
+      "title": "واحد اداری در منطقه ونک",
+      "description": "آپارتمان مناسب برای کسب‌و‌کار با امکانات اداری کامل",
+      "mobile_number": "09123334455",
+      "address": "تهران، خیابان ونک، خیابان گاندی",
+      "price": "600000000",
+      "rooms": 2,
+      "parking": 1,
+      "warHouse": 0,
+      "WC": 1,
+      "WCType": "ایرانی",
+      "elevator": 1,
+      "floor": 7,
+      "collingSystem": "اسپیلت",
+      "heatingSystem": "پکیج",
+      "floorMaterial": "پارکت",
+      "city": "تهران"
+    },
+    {
+      "id": "23w56",
+      "location": {
+        "lat": 35.6939,
+        "lng": 51.3925
+      },
+      "title": "آپارتمان نقلی و خوش نقشه",
+      "description": "واحدی کوچک با قیمت مناسب و امکانات خوب",
+      "mobile_number": "09121112222",
+      "address": "تهران، خیابان جمهوری، خیابان حافظ",
+      "price": "350000000",
+      "rooms": 1,
+      "parking": 0,
+      "warHouse": 0,
+      "WC": 1,
+      "WCType": "ایرانی",
+      "elevator": 0,
+      "floor": 2,
+      "collingSystem": "کولر گازی",
+      "heatingSystem": "بخاری",
+      "floorMaterial": "موکت",
+      "city": "تهران"
+    },
+    {
+      "id": "24x67",
+      "location": {
+        "lat": 35.6926,
+        "lng": 51.3999
+      },
+      "title": "آپارتمان نوساز با امکانات عالی",
+      "description": "واحد نوساز و مجهز به بهترین سیستم‌های رفاهی",
+      "mobile_number": "09127773333",
+      "address": "تهران، خیابان شریعتی، میدان قدس",
+      "price": "700000000",
+      "rooms": 3,
+      "parking": 1,
+      "warHouse": 1,
+      "WC": 2,
+      "WCType": "فرنگی",
+      "elevator": 1,
+      "floor": 4,
+      "collingSystem": "کولر آبی",
+      "heatingSystem": "رادیاتور",
+      "floorMaterial": "سرامیک",
+      "city": "تهران"
+    }
+  ]
+}

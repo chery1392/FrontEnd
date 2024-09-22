@@ -1,59 +1,10 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "ali",
-      "email": "user1@example.com",
-      "password": "user1pass",
-      "role": "admin"
-    },
-    {
-      "id": "2",
-      "name": "mohammad",
-      "email": "user2@example.com",
-      "password": "user2pass",
-      "role": "user"
-    },
-    {
-      "id": "9f4c",
-      "email": "",
-      "password": "1234",
-      "username": "alig82961@gmail.com"
-    },
-    {
       "email": "seyedalirafazi80@gmail.com",
-      "password": "1234",
-      "username": "ali"
-    },
-    {
-      "email": "s80@gmail.com",
-      "password": "$2a$10$EmLrwclDE0NITvNEpy0E1.j8FcURNcIY4c2NQVU/a1O9VfU0G8ZYG",
-      "username": "qwer",
-      "id": "bBFEhUh"
-    },
-    {
-      "email": "mamad@gmail.com",
-      "password": "$2a$10$9dRgFxOioDpCNPxiWa8AO.B2E61bE3t2/KF1PxSiUyWKqmYwoAVru",
-      "username": "mamad",
-      "id": "ABH4Fjd"
-    },
-    {
-      "email": "ali@gmail.com",
-      "password": "$2a$10$S/hs252UmsiAhI9LLZ09Bul3hR7l/ryYyzpLWJKNmW4b4ssGiOjni",
-      "username": "ali4@gmail.com",
-      "id": "ktdotIJ"
-    },
-    {
-      "email": "aeli@gmail.com",
-      "password": "$2a$10$FkrCWmi41Eao1VvYiM9G1Oc5.YaLrAmZpxlFiALZ4tnkIIj0NaiV2",
-      "username": "aeli4@gmail.com",
-      "id": "qE9gDc5"
-    },
-    {
-      "email": "ali5@gmail.com",
-      "password": "$2a$10$kvcs6kqaK2IPmgHp0wUnWunnGtJjRH3Jmil1tGUMAbvrJruEwG9AG",
-      "username": "علی محمدی",
-      "id": "3_s0pOD"
+      "password": "$2a$10$0HJIc/wZj/Z4D4M6T3zSte.1ZbensLv51HbpHPkKXEn1gKp6hVtF2",
+      "username": "ali rafazi",
+      "id": 1
     }
   ],
   "posts": [

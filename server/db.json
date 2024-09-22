@@ -5,6 +5,12 @@
       "password": "$2a$10$0HJIc/wZj/Z4D4M6T3zSte.1ZbensLv51HbpHPkKXEn1gKp6hVtF2",
       "username": "ali rafazi",
       "id": 1
+    },
+    {
+      "email": "mamad@gmail.com",
+      "password": "$2a$10$09L.ncnXRmO2f0pmVOKezuS2An/GrQ8SYfhpCBV3/1GddWfgffVey",
+      "username": "mamadali",
+      "id": 2
     }
   ],
   "posts": [

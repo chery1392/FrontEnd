@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { UserAuth } from "../../icons/SidebarIcon";
+import { useUserContext } from "../../context/UserContext";
 
 interface EnterUserType {
   classHid?: string;
@@ -8,12 +9,10 @@ interface EnterUserType {
 
 const EnterUser: React.FC<EnterUserType> = ({ classHid, children }) => {
   const [openAuth, setOpenAuth] = useState(false);
-  //   const { userState } = useUserContext();
+  const { user } = useUserContext();
+
   const handelClick = () => {
     setOpenAuth(true);
-  };
-  const user = {
-    name: "ali",
   };
 
   return (
@@ -28,8 +27,8 @@ const EnterUser: React.FC<EnterUserType> = ({ classHid, children }) => {
       ) : (
         <button className={`flex gap-2 text-gray-500 items-center ${classHid}`}>
           <UserAuth />
-          {user.name ? (
-            <p className="font-medium">{user.name}</p>
+          {user.username ? (
+            <p className="font-medium">{user.username}</p>
           ) : (
             "کاربر سقفینو"
           )}

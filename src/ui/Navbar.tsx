@@ -13,8 +13,7 @@ const Navbar: React.FC = () => {
             {Logo}
           </Link>
           <div className="hidden md:flex gap-3 font-medium mr-4">
-            <Link to={"/rent-house"}>اجاره</Link>
-            <Link to={"/buy-house"}>خرید</Link>
+            <Link to={"/"}>خانه</Link>
           </div>
         </div>
         <div className="md:hidden">{miniLogo}</div>

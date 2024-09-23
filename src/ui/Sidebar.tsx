@@ -4,7 +4,6 @@ import {
   Home,
   Key,
   LeftArrow,
-  Plus,
   UserAuth,
 } from "../icons/SidebarIcon";
 import EnterUser from "../components/Auth/EnterUser";
@@ -19,13 +18,7 @@ const SidebarOptions = [
   },
   {
     id: 2,
-    text: "اجاره خانه",
-    icon: <Plus />,
-    path: "/rent-house",
-  },
-  {
-    id: 3,
-    text: "خرید خانه",
+    text: "خانه",
     icon: <Home />,
     path: "/",
   },

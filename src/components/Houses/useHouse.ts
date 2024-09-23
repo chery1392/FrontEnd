@@ -7,7 +7,6 @@ export default function useHouse() {
     queryFn: () => getItemApi(),
     retry: false,
   });
-
-  const items = data || {};
+  const items = Array.isArray(data) ? data : [];
   return { items, isLoading };
 }

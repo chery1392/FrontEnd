@@ -4,13 +4,14 @@ import useHouse from "./useHouse";
 
 const FetchHouses: React.FC = () => {
   const { items, isLoading } = useHouse();
+  console.log(items);
+
   return (
     <div className="space-y-5 w-full md:w-1/2">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-6 w-full">
-        {items.length == 0 ? (
+        {isLoading ? (
           <p className="font-semibold w-full">محصولی برای نمایش وجود ندارد</p>
         ) : (
-          !isLoading &&
           items.map((house: any) => <HouseCard key={house.id} house={house} />)
         )}
       </div>

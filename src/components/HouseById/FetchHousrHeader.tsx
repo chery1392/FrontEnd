@@ -1,4 +1,7 @@
-import { Download, SaveFavourite } from "../../icons/FetchHouseIcon";
+import { SaveFavourite, TrashButton } from "../../icons/FetchHouseIcon";
+import ButtonIcon from "../../ui/ButtonIcon";
+import { useState } from "react";
+import DeleteModal from "./DeleteModal";
 
 interface FetchHousrHeaderType {
   city: string;
@@ -11,6 +14,8 @@ const FetchHousrHeader: React.FC<FetchHousrHeaderType> = ({
   titleGroup,
   title,
 }) => {
+  const [deleteModalOpen, setDeleteModalOpen] = useState(false);
+
   return (
     <div className="space-y-5 w-full">
       <div className="flex flex-col gap-4">
@@ -21,9 +26,12 @@ const FetchHousrHeader: React.FC<FetchHousrHeaderType> = ({
             </p>
           </div>
           <div className="flex items-center justify-center gap-2">
-            <button>
-              <Download />
-            </button>
+            <ButtonIcon
+              variant="outline"
+              onClick={() => setDeleteModalOpen(true)}
+            >
+              <TrashButton />
+            </ButtonIcon>
             <button>
               <SaveFavourite />
             </button>
@@ -33,6 +41,10 @@ const FetchHousrHeader: React.FC<FetchHousrHeaderType> = ({
           <p className="font-bold text-lg lg:text-xl">{title}</p>
         </div>
       </div>
+      <DeleteModal
+        deleteModalOpen={deleteModalOpen}
+        setDeleteModalOpen={setDeleteModalOpen}
+      />
     </div>
   );
 };

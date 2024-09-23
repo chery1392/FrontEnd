@@ -7,3 +7,7 @@ export function getItemApi() {
 export function getItemByIdApi(id: string) {
   return http.get(`posts/${id}`).then((data) => data.data);
 }
+
+export function deleteItemByIdApi(id: string) {
+  return http.delete(`posts/${id}`).then((data) => data.data);
+}

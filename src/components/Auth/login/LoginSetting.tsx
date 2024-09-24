@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { loginApi } from "../../../services/auth";
 import TextField from "../../../ui/TextField";
 import { LoginFormData } from "../../../types/AuthType";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginSetting: React.FC = () => {
   const {
@@ -9,8 +10,10 @@ const LoginSetting: React.FC = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<LoginFormData>();
+  const navigate = useNavigate();
   const submit = async (formData: LoginFormData) => {
     loginApi(formData);
+    navigate("/");
   };
   return (
     <form
@@ -45,6 +48,9 @@ const LoginSetting: React.FC = () => {
       >
         ورود
       </button>
+      <Link className="font-medium text-primary" to={"/signup"}>
+        اگر اکانت ندارید کلیک کنید
+      </Link>
     </form>
   );
 };

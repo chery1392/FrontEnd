@@ -3,6 +3,7 @@ import "leaflet/dist/leaflet.css";
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import { LatLngTuple } from "leaflet";
 import useHouse from "./useHouse";
+import { useNavigate } from "react-router-dom";
 
 interface HouseItem {
   id: string;
@@ -11,6 +12,7 @@ interface HouseItem {
 
 const SaghfinooMap: React.FC = () => {
   const { items, isLoading } = useHouse();
+  const navigate = useNavigate();
 
   const defaultCenter: LatLngTuple = [35.6892, 51.389];
 
@@ -27,7 +29,15 @@ const SaghfinooMap: React.FC = () => {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           {items.map((item: HouseItem) => (
-            <Marker position={item.location} key={item.id} />
+            <Marker
+              eventHandlers={{
+                click: () => {
+                  navigate(`/house-details/${item.id}`);
+                },
+              }}
+              position={item.location}
+              key={item.id}
+            />
           ))}
         </MapContainer>
       )}

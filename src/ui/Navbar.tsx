@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
           </EnterUser>
           <Link
             className="px-4 py-2 border border-primary rounded-xl text-primary hover:bg-primary hover:text-white duration-300 text-sm md:text-md"
-            to="/ad-region"
+            to="/add-ad"
           >
             ثبت آگهی
           </Link>

@@ -1,11 +1,5 @@
 import { useEffect, useRef } from "react";
-import {
-  Cross,
-  Home,
-  Key,
-  LeftArrow,
-  UserAuth,
-} from "../icons/SidebarIcon";
+import { Cross, Home, Key, LeftArrow, UserAuth } from "../icons/SidebarIcon";
 import EnterUser from "../components/Auth/EnterUser";
 import { Link } from "react-router-dom";
 
@@ -14,7 +8,7 @@ const SidebarOptions = [
     id: 1,
     text: "ثبت آگهی",
     icon: <Key />,
-    path: "/ad-region",
+    path: "/add-ad",
   },
   {
     id: 2,

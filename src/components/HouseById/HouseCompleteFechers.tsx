@@ -1,4 +1,13 @@
-import { CollingSystem, Elavator, FloorMaterial, HeatingSystem, Parking, WarHouse, Wc, WCType } from "../../icons/FetchHouseIcon";
+import {
+  CollingSystem,
+  Elavator,
+  FloorMaterial,
+  HeatingSystem,
+  Parking,
+  WarHouse,
+  Wc,
+  WCType,
+} from "../../icons/FetchHouseIcon";
 import { toPersianNumbers } from "../../utils/frormatNumber";
 
 interface HouseCompleteFechersType {
@@ -45,7 +54,7 @@ const HouseCompleteFechers: React.FC<HouseCompleteFechersType> = ({
       id: 4,
       text: "نوع سرویس بهداشتی:",
       icon: <WCType />,
-      body: `${wctype}`,
+      body: `${wctype ?? "ایرانی"}`,
     },
     {
       id: 5,
@@ -57,19 +66,19 @@ const HouseCompleteFechers: React.FC<HouseCompleteFechersType> = ({
       id: 6,
       text: "سیستم سرمایش:",
       icon: <CollingSystem />,
-      body: `${collingsystem}`,
+      body: `${collingsystem ?? "کولر آبی"}`,
     },
     {
       id: 7,
       text: "جنس کف:",
       icon: <FloorMaterial />,
-      body: `${floorMaterial}`,
+      body: `${floorMaterial ?? "سرامیک"}`,
     },
     {
       id: 8,
       text: "سیستم گرمایش:",
       icon: <HeatingSystem />,
-      body: `${heatingSystem}`,
+      body: `${heatingSystem ?? "رادیاتور"}`,
     },
   ];
 

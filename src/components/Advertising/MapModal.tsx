@@ -1,20 +1,7 @@
 import { MapContainer, Marker, TileLayer, useMapEvents } from "react-leaflet";
 import Modal from "../../ui/Modal";
+import { MapModalType } from "../../types/AdvertisingType";
 
-interface MapModalType {
-  setMapModalOpen: (open: boolean) => void;
-  mapModalOpen: boolean;
-  location: {
-    lat: number;
-    lng: number;
-  };
-  setLocation: React.Dispatch<
-    React.SetStateAction<{
-      lat: number;
-      lng: number;
-    }>
-  >;
-}
 const MapModal: React.FC<MapModalType> = ({
   mapModalOpen,
   setMapModalOpen,

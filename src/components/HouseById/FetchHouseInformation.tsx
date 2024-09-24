@@ -1,12 +1,10 @@
+import { FetchHouseInformationType } from "../../types/HouseByIdType";
 import FechHousePrice from "./FechHousePrice";
 import FetchHouseDescription from "./FetchHouseDescription";
 import FetchHousrHeader from "./FetchHousrHeader";
 import HouseCompleteFechers from "./HouseCompleteFechers";
 import HouseFeachers from "./HouseFeachers";
 
-interface FetchHouseInformationType {
-  fetchHouse: any;
-}
 const FetchHouseInformation: React.FC<FetchHouseInformationType> = ({
   fetchHouse,
 }) => {

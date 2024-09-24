@@ -1,10 +1,6 @@
 import { Floor, Metr, Room } from "../../icons/FetchHouseIcon";
+import { HouseFeachersType } from "../../types/HouseByIdType";
 import { toPersianNumbers } from "../../utils/frormatNumber";
-
-interface HouseFeachersType {
-  floor: number;
-  rooms: number;
-}
 
 const HouseFeachers: React.FC<HouseFeachersType> = ({ floor, rooms }) => {
   const Feachers = [

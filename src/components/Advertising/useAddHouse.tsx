@@ -3,6 +3,11 @@ import { addItemApi } from "../../services/items";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
+interface ApiError {
+  message: string;
+  status?: number; 
+}
+
 export default function useAddHouse() {
   const queryClient = useQueryClient();
   const navigate = useNavigate();
@@ -17,9 +22,11 @@ export default function useAddHouse() {
       });
       navigate("/");
     },
-    onError: (err: any) => {
-      toast.error(err?.message);
+    onError: (err: unknown) => {
+      const apiError = err as ApiError; 
+      toast.error(apiError?.message || "خطایی رخ داده است");
     },
   });
+
   return { isPending, addHouse };
 }

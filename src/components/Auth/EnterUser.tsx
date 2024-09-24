@@ -1,11 +1,7 @@
 import { useState } from "react";
 import { UserAuth } from "../../icons/SidebarIcon";
 import { useUserContext } from "../../context/UserContext";
-
-interface EnterUserType {
-  classHid?: string;
-  children: React.ReactNode;
-}
+import { EnterUserType } from "../../types/AuthType";
 
 const EnterUser: React.FC<EnterUserType> = ({ classHid, children }) => {
   const [openAuth, setOpenAuth] = useState(false);
@@ -34,12 +30,6 @@ const EnterUser: React.FC<EnterUserType> = ({ classHid, children }) => {
           )}
         </button>
       )}
-      {/* <AuthModal
-        setOpenAuth={setOpenAuth}
-        openAuth={openAuth}
-        user={user}
-        loading={userState.loading}
-      /> */}
     </div>
   );
 };

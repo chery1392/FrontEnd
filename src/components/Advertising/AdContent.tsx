@@ -4,6 +4,7 @@ import Button from "../../ui/Button";
 import { useState } from "react";
 import MapModal from "./MapModal";
 import useAddHouse from "./useAddHouse";
+import { FormData } from "../../types/AdvertisingType";
 
 const AdContent: React.FC = () => {
   const {
@@ -13,11 +14,10 @@ const AdContent: React.FC = () => {
   } = useForm<FormData>();
   const [mapModalOpen, setMapModalOpen] = useState(false);
   const [location, setLocation] = useState({ lat: 35.6892, lng: 51.389 });
-  const { addHouse, isPending } = useAddHouse();
+  const { addHouse } = useAddHouse();
 
-  const onCkickSubmit = (data: any) => {
+  const onCkickSubmit = (data: FormData) => {
     const newData = { ...data, location };
-    console.log(newData);
     addHouse(newData);
   };
 

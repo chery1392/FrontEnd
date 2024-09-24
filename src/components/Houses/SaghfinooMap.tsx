@@ -4,11 +4,7 @@ import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import { LatLngTuple } from "leaflet";
 import useHouse from "./useHouse";
 import { useNavigate } from "react-router-dom";
-
-interface HouseItem {
-  id: string;
-  location: LatLngTuple;
-}
+import { HouseItem } from "../../types/HousesType";
 
 const SaghfinooMap: React.FC = () => {
   const { items, isLoading } = useHouse();

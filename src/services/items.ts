@@ -24,7 +24,7 @@ export function edittemByIdApi(
     mobile_number: number;
     city: string;
     address: string;
-    price: string;
+    price: number;
   }
 ) {
   return http.patch(`posts/${id}`, updates).then((data) => data.data);

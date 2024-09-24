@@ -1,10 +1,6 @@
 import { Warn } from "../../icons/FetchHouseIcon";
+import { FechHousePriceType } from "../../types/HouseByIdType";
 import { toPersianNumbersWithComma } from "../../utils/frormatNumber";
-
-interface FechHousePriceType {
-  city?: string;
-  price: number;
-}
 
 const FechHousePrice: React.FC<FechHousePriceType> = ({ city, price }) => {
   return (

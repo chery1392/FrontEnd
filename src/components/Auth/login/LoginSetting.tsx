@@ -1,14 +1,15 @@
 import { useForm } from "react-hook-form";
 import { loginApi } from "../../../services/auth";
 import TextField from "../../../ui/TextField";
+import { LoginFormData } from "../../../types/AuthType";
 
 const LoginSetting: React.FC = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
-  const submit = async (formData: any) => {
+  } = useForm<LoginFormData>();
+  const submit = async (formData: LoginFormData) => {
     loginApi(formData);
   };
   return (

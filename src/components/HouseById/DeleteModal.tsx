@@ -2,11 +2,8 @@ import { useParams } from "react-router-dom";
 import Button from "../../ui/Button";
 import Modal from "../../ui/Modal";
 import useDeleteHouseById from "./useDeleteHouseById";
+import { DeleteModalType } from "../../types/HouseByIdType";
 
-export interface DeleteModalType {
-  setDeleteModalOpen: (open: boolean) => void;
-  deleteModalOpen: boolean;
-}
 const DeleteModal: React.FC<DeleteModalType> = ({
   deleteModalOpen,
   setDeleteModalOpen,

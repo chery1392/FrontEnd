@@ -1,17 +1,9 @@
-import {
-  EditdButton,
-  TrashButton,
-} from "../../icons/FetchHouseIcon";
+import { EditdButton, TrashButton } from "../../icons/FetchHouseIcon";
 import ButtonIcon from "../../ui/ButtonIcon";
 import { useState } from "react";
 import DeleteModal from "./DeleteModal";
 import EditModal from "./EditModal";
-
-interface FetchHousrHeaderType {
-  city: string;
-  titleGroup: string;
-  title: string;
-}
+import { FetchHousrHeaderType } from "../../types/HouseByIdType";
 
 const FetchHousrHeader: React.FC<FetchHousrHeaderType> = ({
   city,

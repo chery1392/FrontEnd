@@ -2,6 +2,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 import { deleteItemByIdApi } from "../../services/items";
 import { useNavigate } from "react-router-dom";
+import { ErrorType } from "../../types/ErrorType";
 
 export default function useDeleteHouseById() {
   const queryClient = useQueryClient();
@@ -16,9 +17,10 @@ export default function useDeleteHouseById() {
       });
       navigate("/");
     },
-    onError: (err: any) => {
-      toast.error(err?.message);
-      console.log(err?.message);
+    onError: (err: unknown) => {
+      const errorMessage = (err as ErrorType)?.message || "حذف ناموفق بود";
+      toast.error(errorMessage);
+      console.log(errorMessage);
     },
   });
   return { isPending, removeHouse };

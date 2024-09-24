@@ -1,6 +1,4 @@
-interface FetchHouseDescriptionType {
-  description?: string;
-}
+import { FetchHouseDescriptionType } from "../../types/HouseByIdType";
 
 const FetchHouseDescription: React.FC<FetchHouseDescriptionType> = ({
   description,

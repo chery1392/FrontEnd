@@ -6,12 +6,9 @@ import TextField from "../../ui/TextField";
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 import useHouseById from "./useHouseById";
+import { EditHouseFormData, EditModalType } from "../../types/HouseByIdType";
 
-export interface DeleteModalType {
-  setEditModalOpen: (open: boolean) => void;
-  editModalOpen: boolean;
-}
-const EditModal: React.FC<DeleteModalType> = ({
+const EditModal: React.FC<EditModalType> = ({
   editModalOpen,
   setEditModalOpen,
 }) => {
@@ -30,7 +27,7 @@ const EditModal: React.FC<DeleteModalType> = ({
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormData>();
+  } = useForm<EditHouseFormData>();
   console.log(item);
 
   useEffect(() => {
@@ -46,7 +43,7 @@ const EditModal: React.FC<DeleteModalType> = ({
     }
   }, [isLoading, item]);
 
-  const handelEdit = (e: any) => {
+  const handelEdit = (e: EditHouseFormData) => {
     editHouse({ id, updates: e });
     setEditModalOpen(false);
   };

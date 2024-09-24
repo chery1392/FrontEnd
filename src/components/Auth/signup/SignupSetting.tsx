@@ -1,14 +1,15 @@
 import { useForm } from "react-hook-form";
 import { signupApi } from "../../../services/auth";
 import TextField from "../../../ui/TextField";
+import { SignupFormData } from "../../../types/AuthType";
 
 const SignupSetting: React.FC = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
-  const submit = async (formData: any) => {
+  } = useForm<SignupFormData>();
+  const submit = async (formData: SignupFormData) => {
     signupApi(formData);
   };
   return (

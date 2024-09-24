@@ -8,18 +8,8 @@ import {
   Wc,
   WCType,
 } from "../../icons/FetchHouseIcon";
+import { HouseCompleteFechersType } from "../../types/HouseByIdType";
 import { toPersianNumbers } from "../../utils/frormatNumber";
-
-interface HouseCompleteFechersType {
-  parking?: number;
-  wc?: number;
-  warhouse?: number;
-  wctype?: string;
-  elavator?: number;
-  collingsystem?: string;
-  floorMaterial?: string;
-  heatingSystem?: string;
-}
 
 const HouseCompleteFechers: React.FC<HouseCompleteFechersType> = ({
   collingsystem,

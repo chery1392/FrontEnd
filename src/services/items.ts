@@ -15,3 +15,17 @@ export function getItemByIdApi(id: string) {
 export function deleteItemByIdApi(id: string) {
   return http.delete(`posts/${id}`).then((data) => data.data);
 }
+
+export function edittemByIdApi(
+  id: string,
+  updates: {
+    title: string;
+    description: string;
+    mobile_number: number;
+    city: string;
+    address: string;
+    price: string;
+  }
+) {
+  return http.patch(`posts/${id}`, updates).then((data) => data.data);
+}
